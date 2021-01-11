@@ -1,0 +1,10 @@
+RED = (255, 0, 0)
+YELLOW = (255, 255, 0)
+
+ROWS = 6
+COLS = 7
+
+PADDING_X = 75
+PADDING_Y = 135
+
+COL_PAD = 70
