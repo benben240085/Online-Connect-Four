@@ -70,17 +70,17 @@ def threaded_client(conn, p, gameId):
 
 
 while True:
-    conn, addr = s.accept()
+    connection, addr = s.accept()
     print("Connected to:", addr)
 
     idCount += 1
-    p = 0
+    player = 0
     gameId = (idCount - 1) // 2
     if idCount % 2 == 1:
         games[gameId] = Game(gameId, 750, 650)
         print("Creating a new game...")
     else:
         games[gameId].ready = True
-        p = 1
+        player = 1
 
-    start_new_thread(threaded_client, (conn, p, gameId))
+    start_new_thread(threaded_client, (connection, player, gameId))
