@@ -1,7 +1,6 @@
 import socket
 from _thread import *
 import pickle
-import sys
 
 from game import Game
 
