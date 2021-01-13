@@ -114,7 +114,7 @@ def main():
                 if event.key == pygame.K_7 or event.key == pygame.K_KP7:
                     key = "6"
 
-                if game.board[0][int(key)] != 0:
+                if key and game.board[0][int(key)] != 0:
                     key = None
 
                 if game.connected():
